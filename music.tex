@@ -1,0 +1,106 @@
+\documentclass[10pt]{jbook}
+%\usepackage[top=2cm,bottom=2cm,left=2.5cm,right=2.5cm]{geometry}
+
+\title{\LaTeX + Lilypond (洒撕峡)}
+\date{}
+\author{}
+
+
+\begin{document}
+\maketitle
+\chapter{\LaTeX の矢今面で弛设を山绩するサンプルですˉ}
+
+负３、没３、墓３、笼３
+\begin{lilypond}[quote,fragment,staffsize=16] 
+\relative c'{
+<cis es>1 <cis e> <des f> <des fis>
+}
+\end{lilypond}
+
+下兰弄没不超
+\begin{lilypond}[quote,fragment,staffsize=16] 
+\relative c''{
+\clef treble
+\key gis \minor
+gis4 ais b cis dis e fisis gis
+}
+\end{lilypond}
+
+モ〖ツァルト
+\begin{lilypond}[quote,fragment,staffsize=16] 
+\relative c''{
+\clef treble
+\time 2/4
+\key g \minor
+r4 es8 d d4 es8 d d4 es8 d d4 bes' r bes8 a g4 g8 f es4 es8 d
+}
+\end{lilypond}
+
+\section{下兰}
+
+SATB
+
+\begin{lilypond}[quote,fragment,staffsize=16] 
+\new StaffGroup <<
+	\new Staff<<
+		\clef soprano
+		\set Staff.instrumentName = \markup{ Soprano }
+		\relative c' {
+			c'2 c b c
+		}
+	>>
+	\new Staff<<
+		\clef alto
+		\set Staff.instrumentName = \markup{ Alto }
+		\relative c' {
+			e2 f d e
+		}
+	>>
+	\new Staff <<
+		\clef tenor
+		\set Staff.instrumentName = \markup{ Tenor }
+		\relative c{
+			g'2 a g g
+		}
+	>>
+	\new Staff<<
+		\clef bass
+		\set Staff.instrumentName = \markup{ Bass }
+		\relative c{
+			c2 f, g c
+		}
+	>>
+>>
+\end{lilypond}
+
+络设山
+
+\begin{lilypond}[quote,fragment,staffsize=16] 
+\new PianoStaff <<
+	\new Staff<<
+		\clef treble
+		\relative c' {
+			c'2 c b c
+		}\\
+		\relative c' {
+			e2 f d e
+		}
+	>>
+	\new Staff <<
+		\clef bass
+		\relative c{
+			g'2 a g g
+		}\\
+		\relative c{
+			c2 f, g c
+		}
+	>>
+>>
+\end{lilypond}
+
+\[
+a + b + c = d
+\]
+\end{document}
+
+
