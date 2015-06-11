@@ -1,11 +1,10 @@
 \documentclass[10pt]{jbook}
 %\usepackage[top=2cm,bottom=2cm,left=2.5cm,right=2.5cm]{geometry}
 
-%\usepackage{type1ec} %Type1フォント(英数字や記号などの1バイト文字を表示するフォント形式)を使用するとき
-%\usepackage[OT2,T1]{fontenc}	% OT2はロシア語(キリル文字)を使用する場合に指定する
-%\usepackage{textcomp}	% TS1エンコーディング(T1エンコーディング以外の各種記号)を使用する場合
-%\usepackage{hiraprop}	% Times系フォントを使用する場合
-%\usepackage[english,french,russian]{babel}
+% Russian
+\usepackage[OT2,T1]{fontenc}
+\usepackage[russian, english]{babel}
+% apt-get install texlive-lang-cyrillic
 
 \title{\LaTeX + Lilypond (備忘録)}
 \date{}
@@ -125,9 +124,19 @@ SATB
 >>
 \end{lilypond}
 
+\chapter{普通の\TeX}
 \[
 a + b + c = d
 \]
+
+\chapter{ロシア語}
+{\cyr Cai0kovskii0} 
+{\cyr Strav{\'i}nskii0} 
+{\cyr Shostakovic} 
+{\cyr Prokofp1ev}
+
+
+
 \end{document}
 
 
