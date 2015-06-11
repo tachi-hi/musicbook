@@ -1,23 +1,50 @@
 \documentclass[10pt]{jbook}
 %\usepackage[top=2cm,bottom=2cm,left=2.5cm,right=2.5cm]{geometry}
 
-\title{\LaTeX + Lilypond (��˺Ͽ)}
+%\usepackage{type1ec} %Type1フォント(英数字や記号などの1バイト文字を表示するフォント形式)を使用するとき
+%\usepackage[OT2,T1]{fontenc}	% OT2はロシア語(キリル文字)を使用する場合に指定する
+%\usepackage{textcomp}	% TS1エンコーディング(T1エンコーディング以外の各種記号)を使用する場合
+%\usepackage{hiraprop}	% Times系フォントを使用する場合
+%\usepackage[english,french,russian]{babel}
+
+\title{\LaTeX + Lilypond (備忘録)}
 \date{}
 \author{}
 
 
 \begin{document}
 \maketitle
-\chapter{\LaTeX ��ʸ����ǳ����ɽ�����륵��ץ�Ǥ���}
+\chapter{\LaTeX の文書中で楽譜を表示するサンプルです．}
+%\selectlanguage{russian}
+%\foreignlanguage{russian}{\CYRA}
 
-������û����Ĺ��������
+減３、短３、長３、増３
 \begin{lilypond}[quote,fragment,staffsize=16] 
 \relative c'{
 <cis es>1 <cis e> <des f> <des fis>
 }
 \end{lilypond}
 
-����Ūû����
+
+\begin{lilypond}[quote,fragment,staffsize=16, notime] % "notime" option removes time signature and bar
+\relative c'{
+c1^\markup{一度} \glissando c1 \bar "||"
+c ^\markup{増一度} \glissando cis \bar "||"
+c?^\markup{長二度} \glissando d \bar "||"
+c ^\markup{増二度} \glissando dis \bar "||"
+c ^\markup{長三度} \glissando e \bar "||"
+c ^\markup{完全四度} \glissando f \bar "||"
+c ^\markup{増四度} \glissando fis \bar "||"
+c ^\markup{完全五度} \glissando g' \bar "||"
+c,^\markup{増五度} \glissando gis' \bar "||"
+c,^\markup{長六度} \glissando a' \bar "||"
+c,^\markup{増六度} \glissando ais' \bar "||"
+c,^\markup{長七度} \glissando b' \bar "||"
+c,^\markup{完全八度} \glissando c' \bar "||"
+}
+\end{lilypond}
+
+和声的短音階
 \begin{lilypond}[quote,fragment,staffsize=16] 
 \relative c''{
 \clef treble
@@ -26,7 +53,7 @@ gis4 ais b cis dis e fisis gis
 }
 \end{lilypond}
 
-�⡼�ĥ����
+モーツァルト
 \begin{lilypond}[quote,fragment,staffsize=16] 
 \relative c''{
 \clef treble
@@ -36,7 +63,7 @@ r4 es8 d d4 es8 d d4 es8 d d4 bes' r bes8 a g4 g8 f es4 es8 d
 }
 \end{lilypond}
 
-\section{����}
+\section{和声}
 
 SATB
 
@@ -73,7 +100,7 @@ SATB
 >>
 \end{lilypond}
 
-����ɽ
+大譜表
 
 \begin{lilypond}[quote,fragment,staffsize=16] 
 \new PianoStaff <<
